@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.904);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.continer{
+    width: 80%;
+    height: 80vh;
+    background-color: rgba(255,255,255,.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+.continer nav{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 2vh 2vh;
+}
+nav a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-size: 27px;
+    letter-spacing: 3px;
+
+}
+nav ul{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+
+
+}
+nav ul li a{
+    font-size: 17px;
+    letter-spacing: 2px;
+    
+}
+.continer nav a:hover{
+    color: rgba(255, 0, 0, 0.774);
+    transition: 1s;
+}
+body:after{
+    content: '';
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+    position: absolute;
+    clip-path: circle(36% at right 70% );
+    z-index: -1;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    color: white;
+    text-transform: uppercase;
+}
+.content .text{
+    width: 40%;
+    margin:5vw 8vw;
+    
+}
+.content .text h1{
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+.content .text p{
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0.6;
+    line-height: 25px;
+    margin: 1vw 0;
+    letter-spacing: 1px;
+
+}
+.content .image{
+    width: 40%;
+    
+
+}
+.content .image img{
+    width: 400px;
+}
+@media screen and (min-width:950px) and (max-width:1150px){
+    .content .image img{
+        width: 320px;
+    }
+}
+@media  (max-width:950px) {
+
+    .continer{
+        height: 90%;
+    }
+    .content , .continer nav{
+        flex-direction: column ;
+        justify-content: center;
+    }
+    .content .image img ,.content .text{
+        width: 80%;
+    }
+    .content .image img{
+        width: 100%;
+        margin-bottom: 4vw;
+    }
+    body:after{
+         clip-path: circle(40% at bottom);
+    }
+}
